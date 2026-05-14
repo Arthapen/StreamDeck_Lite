@@ -1,0 +1,12 @@
+# .NET Core
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Mac/OSX
+.DS_Store

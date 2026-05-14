@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StreamDeck Lite - Mixer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-bar">
+        <h1>STREAMDECK <span>LITE</span></h1>
+        <div id="connection-status" class="status disconnected">Desconectado</div>
+    </header>
+
+    <main class="mixer-container" id="mixer">
+        <!-- Mock: Canal de Spotify -->
+        <div class="channel-card" data-app="spotify">
+            <div class="channel-header">
+                <h2>Spotify</h2>
+                <span class="volume-readout">65%</span>
+            </div>
+            
+            <div class="fader-container">
+                <input type="range" class="fader" min="0" max="1" step="0.01" value="0.65" data-app="spotify">
+            </div>
+
+            <div class="routing-container">
+                <select class="routing-select" data-app="spotify">
+                    <option value="default">Salida del Sistema</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Mock: Canal de Discord -->
+        <div class="channel-card" data-app="discord">
+            <div class="channel-header">
+                <h2>Discord</h2>
+                <span class="volume-readout">80%</span>
+            </div>
+            
+            <div class="fader-container">
+                <input type="range" class="fader" min="0" max="1" step="0.01" value="0.80" data-app="discord">
+            </div>
+
+            <div class="routing-container">
+                <select class="routing-select" data-app="discord">
+                    <option value="default">Salida del Sistema</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Mock: Canal de CS2 -->
+        <div class="channel-card" data-app="cs2">
+            <div class="channel-header">
+                <h2>CS2 (Juego)</h2>
+                <span class="volume-readout">100%</span>
+            </div>
+            
+            <div class="fader-container">
+                <input type="range" class="fader accent-gaming" min="0" max="1" step="0.01" value="1.00" data-app="cs2">
+            </div>
+
+            <div class="routing-container">
+                <select class="routing-select" data-app="cs2">
+                    <option value="default" selected>Salida del Sistema</option>
+                </select>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
