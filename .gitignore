@@ -2,6 +2,11 @@
 bin/
 obj/
 
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
 # Visual Studio / VS Code
 .vscode/
 .vs/
